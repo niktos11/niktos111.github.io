@@ -586,6 +586,82 @@ section .opentype .opentype-div .left-content .opentype-btn {
   margin-right: 0;
   margin-left: 85px;
 }
+section footer {
+  display: flex;
+  padding: 107px 0px;
+  flex-direction: column;
+  align-self: stretch;
+}
+section footer .a-footers {
+  display: flex;
+  align-items: flex-start;
+  gap: 75px;
+  margin-left: 50px;
+}
+section footer .a-footers .a-footer:nth-of-type(3) {
+  margin-right: 199px;
+}
+section footer .a-footers .a-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  margin-left: 30px;
+}
+section footer .a-footers .a-footer .h1-a {
+  font-family: Graphik Trial, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  color: #fff;
+  text-decoration: none;
+}
+section footer .a-footers .a-footer .a-nav-footer {
+  font-family: Graphik Trial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: -15px;
+}
+section footer .a-footers .contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+section footer .a-footers .contact-info .location {
+  display: flex;
+  flex-direction: row;
+}
+section footer .a-footers .contact-info .location .location-p {
+  font-family: Graphik Trial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  color: #fff;
+  margin-left: 8px;
+}
+section footer .a-footers .contact-info .telephone {
+  display: flex;
+  flex-direction: row;
+}
+section footer .a-footers .contact-info .telephone .telephone-p {
+  font-family: Graphik Trial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  color: #fff;
+  margin-left: 10px;
+}
+section footer .a-footers .contact-info .social-media .icons-social-media {
+  margin-right: 17px;
+}
 
 .container {
   width: 1200px;
