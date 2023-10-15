@@ -466,11 +466,28 @@ section .testimonials .comments {
   row-gap: 20px;
   column-gap: 20px;
 }
-section .testimonials .comments .comment:nth-child(2) {
+section .testimonials .comments .comment:nth-child(1) {
   margin-bottom: 0px;
-  height: 230px;
+  height: 200px;
+  margin-top: 10px;
+  padding-bottom: 90px;
+}
+section .testimonials .comments .comment:nth-child(2) {
+  height: 200px;
+  padding-bottom: 80px;
+}
+section .testimonials .comments .comment:nth-child(2) .client {
+  margin-top: 0;
+}
+section .testimonials .comments .comment:nth-child(3) {
+  height: 200px;
+  margin-top: 0px;
+  padding-bottom: 70px;
+}
+section .testimonials .comments .comment:nth-child(4) {
+  height: 200px;
   margin-top: -20px;
-  max-height: max-content;
+  padding-bottom: 70px;
 }
 section .testimonials .comments .comment {
   display: flex;
@@ -571,7 +588,7 @@ section .opentype .opentype-div .left-content .opentype-h1 {
 }
 section .opentype .opentype-div .left-content .opentype-btn {
   display: flex;
-  padding: 10px 31px;
+  padding: 15px 66px;
   align-items: center;
   gap: 10px;
   background: #4452FE;
@@ -585,6 +602,10 @@ section .opentype .opentype-div .left-content .opentype-btn {
   justify-content: center;
   margin-right: 0;
   margin-left: 85px;
+}
+section .opentype .opentype-div .right-content .img-opentype {
+  border-bottom-right-radius: 20px;
+  margin-bottom: -5px;
 }
 section footer {
   display: flex;
