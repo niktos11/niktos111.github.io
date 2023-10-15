@@ -1,4 +1,41 @@
 @import './base.scss';
+
+@media (max-width: 1280px) {
+    .container {
+        width: 1000px;
+    }
+    header .div-nav{
+        display: flex;
+        flex-direction: row;
+        max-width: fit-content;
+        .adaptive-a-navs{
+            display: flex;
+            margin-left: 20px;
+        }
+        .a-navs{
+            display: none;
+        }
+    }
+    .presentation{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        align-items: center;
+        height: auto;
+        .pres-h1{
+            font-size: 55px;
+        }
+        
+    }
+    .imgs-rotate-pres img{
+        max-width: 70%;
+        max-height: 70%;
+    }
+}
+
+
+
+
 body{
     background: #181818;
     font-family: Graphik Trial , sans-serif;
@@ -73,8 +110,8 @@ section{
 }
 
 .imgs-rotate-pres{
-    width: 1552.023px;
-    height: 841px;
+    max-width: 1552.023px;
+    max-height: 841px;
     margin-bottom: 100px;
     display: flex;
         margin:auto;

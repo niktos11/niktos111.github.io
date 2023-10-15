@@ -4,6 +4,37 @@
   margin: 0 auto;
 }
 
+@media (max-width: 1280px) {
+  .container {
+    width: 1000px;
+  }
+  header .div-nav {
+    display: flex;
+    flex-direction: row;
+    max-width: fit-content;
+  }
+  header .div-nav .adaptive-a-navs {
+    display: flex;
+    margin-left: 20px;
+  }
+  header .div-nav .a-navs {
+    display: none;
+  }
+  .presentation {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: center;
+    height: auto;
+  }
+  .presentation .pres-h1 {
+    font-size: 55px;
+  }
+  .imgs-rotate-pres img {
+    max-width: 70%;
+    max-height: 70%;
+  }
+}
 body {
   background: #181818;
   font-family: Graphik Trial, sans-serif;
@@ -70,8 +101,8 @@ section .presentation .pres-btns .pres-btn-2 {
   cursor: pointer;
 }
 section .imgs-rotate-pres {
-  width: 1552.023px;
-  height: 841px;
+  max-width: 1552.023px;
+  max-height: 841px;
   margin-bottom: 100px;
   display: flex;
   margin: auto;
@@ -702,6 +733,9 @@ section footer .a-footers .contact-info .social-media .icons-social-media {
   background-color: #181818;
   border: 1px solid #fff;
   cursor: pointer;
+}
+.div-nav .adaptive-a-navs {
+  display: none;
 }
 .div-nav .logo {
   display: flex;
