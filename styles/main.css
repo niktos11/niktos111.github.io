@@ -1020,12 +1020,17 @@ section .opentype .opentype-div {
   align-items: center;
   gap: 86px;
   border-radius: 33px;
-  flex-direction: column;
-  padding-bottom: 200px;
+  flex-direction: row;
+}
+@media (max-width: 1023px) {
+  section .opentype .opentype-div {
+    flex-direction: column;
+  }
 }
 @media (max-width: 767px) {
   section .opentype .opentype-div {
     background: #181818;
+    flex-direction: column;
   }
 }
 section .opentype .opentype-div .left-content .opentype-h1 {
@@ -1107,13 +1112,13 @@ section .opentype .opentype-div .right-content .img-opentype-adaptive {
 }
 section .opentype .opentype-div .right-content .img-opentype {
   border-bottom-right-radius: 20px;
-  margin-bottom: -5px;
   display: flex;
+  flex-direction: column;
 }
 @media (max-width: 1023px) {
   section .opentype .opentype-div .right-content .img-opentype {
     border-radius: 20px;
-    margin-top: -50px;
+    width: 100%;
   }
 }
 @media (max-width: 767px) {
@@ -1132,6 +1137,7 @@ section footer .a-footers {
   align-items: flex-start;
   gap: 75px;
   margin-left: 50px;
+  justify-content: center;
 }
 @media (max-width: 767px) {
   section footer .a-footers {

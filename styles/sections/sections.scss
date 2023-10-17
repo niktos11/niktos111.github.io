@@ -806,10 +806,13 @@ align-self: stretch;
         align-items: center;
         gap: 86px;
         border-radius: 33px;
-        flex-direction: column;
-        padding-bottom: 200px;
+        flex-direction: row;
+        @include horizontalTable{
+            flex-direction: column;
+        }
         @include verticalTable{
             background: #181818;
+            flex-direction: column;
         }
         .left-content{
             .opentype-h1{
@@ -867,6 +870,7 @@ align-self: stretch;
         .right-content{
             .img-opentype-adaptive{
                 display: none;
+                
                 @include verticalTable{
                     display: flex;
                     width: 100%;
@@ -874,11 +878,11 @@ align-self: stretch;
             }
             .img-opentype{
                 border-bottom-right-radius: 20px;
-                margin-bottom: -5px;
                 display: flex;
+                flex-direction: column;
                 @include horizontalTable{
                     border-radius: 20px;
-                    margin-top: -50px;
+                    width: 100%;
                 }
                 @include verticalTable{
                     display: none;
@@ -897,6 +901,7 @@ footer{
         align-items: flex-start;
         gap: 75px;
         margin-left: 50px;
+        justify-content: center;
         @include verticalTable{
                 display: flex;
                 flex-direction: column;
