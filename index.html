@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tryscss</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="/styles/main.css">
     <link href="https://fonts.cdnfonts.com/css/graphik-trial" rel="stylesheet">
 </head>
 <body>
     <section>
-    <header class="container">
-        <div class="div-nav">
+    <header>
+        
+        <div class="div-nav container">
             <img src="./imgs/Rectangle 4.png" class="logo">
             <div class="a-navs">
                 <a href="#" class="a-nav">Home</a>
@@ -41,19 +42,6 @@
             <img src="./imgs/screens (1).png"  alt="png-dashboard" class="img-dashboard">
         </div>
     </section>
-    <!-- <section class="gallery">
-        <h1 class="gallery-h1">Gallery</h1>
-        <p class="p-gallery">
-            We focus on ergonomics and meeting you where you work. It's only a keystroke away.
-        </p>
-        <img src="/imgs/Rectangle 1.png" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-    </section> -->
     <section class="features" id="features">
         <h1 class="features-h1">Features</h1>
         <p class="features-p">
@@ -90,7 +78,6 @@
                 </div>
             </div>
         </div>
-        
     </section>
     <section class="contents">
         <h1 class="content-h1">Contents</h1>
@@ -107,8 +94,7 @@
                     you identify.
                 </p>
                 <button class="card-btn">Sigh Up</button>
-                <img src="./imgs/Macbook Pro.png">
-            
+                <img src="./imgs/Macbook Pro.png" class="card-img1">
             </div>
             <div class="card">
                 <h2 class="card-h2">Design with real data</h2>
@@ -139,10 +125,7 @@
             <img src="./imgs/Rectangle 1 (5).png" alt="img6" class="gallery-img6">
             <img src="./imgs/Rectangle 1 (6).png" alt="img7" class="gallery-img7">
         </div>
-        <button class="gallery-btn">See more</button>      
-        
-
-
+        <button class="gallery-btn">See more</button>
     </section>
     <section class="partners">
         <h1 class="partners-h1">Partners</h1>
@@ -169,7 +152,6 @@
                     <p class="commentor">Claire Bell</p>
                     <p class="job">Designer</p>
                 </div>
-                
                 <p class='comment-p'>
                     Slate helps you see how many more days 
                     you need to work to reach your financial 
@@ -186,7 +168,6 @@
                     <p class="commentor">Francisco Lane</p>
                     <p class="job">Designer</p>
                 </div>
-                
                 <p class="comment-p">
                     Slate helps you see how many more days 
                     you need to work to reach your financial 
@@ -201,8 +182,7 @@
                     <img class="avatar" src="./imgs/avatars/Ellipse 2 (2).svg">
                     <p class="commentor">Ralph Fisher</p>
                     <p class="job">Designer</p>
-                </div>
-                
+                </div> 
                 <p class="comment-p">
                     Slate helps you see how many more days 
                     you need to work to reach your financial 
@@ -213,14 +193,12 @@
                     goal for the month and year.
                 </p>
             </div>
-            
             <div class="comment">
                 <div class="client">
                     <img class="avatar" src="./imgs/avatars/Ellipse 2.svg">
                     <p class="commentor">Jorge Murphy</p>
                     <p class="job">Designer</p>
                 </div>
-                
                 <p class="comment-p">
                     Slate helps you see how many more days 
                     you need to work to reach your financial 
@@ -240,8 +218,8 @@
             </div>
             <div class="right-content">
                 <img class="img-opentype" src="./imgs/Line Chart 1.png">
+                <img class="img-opentype-adaptive" src='./imgs/Line Chart1-adaptive.png'>
             </div>
-            
         </div>
     </section>
     <footer class="container">
@@ -274,7 +252,7 @@
                 </div>
                 <div class="telephone">
                     <img class="icon-phone" src="./imgs/icons/ic_baseline-phone-android.svg">
-                    <p class="telephone-p">(239) 555-0108</p>
+                    <a href="tel:88005552525" class="telephone-p">(239) 555-0108</a>
                 </div>
                 <div class="social-media">
                     <img src="./imgs/icons/ant-design_twitter-outlined.svg" alt="twitter" class="icons-social-media">
@@ -283,7 +261,6 @@
                 </div>
             </div>
         </div>
-       
     </footer>
 </section>
 </body>

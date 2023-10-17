@@ -1,40 +1,3 @@
-@import './base.scss';
-
-@media (max-width: 1280px) {
-    .container {
-        width: 1000px;
-    }
-    header .div-nav{
-        display: flex;
-        flex-direction: row;
-        max-width: fit-content;
-        .adaptive-a-navs{
-            display: flex;
-            margin-left: 20px;
-        }
-        .a-navs{
-            display: none;
-        }
-    }
-    .presentation{
-        display: flex;
-        flex-direction: column;
-        width: 60%;
-        align-items: center;
-        height: auto;
-        .pres-h1{
-            font-size: 55px;
-        }
-        
-    }
-    .imgs-rotate-pres img{
-        max-width: 70%;
-        max-height: 70%;
-    }
-}
-
-
-
 
 body{
     background: #181818;
@@ -64,10 +27,30 @@ section{
         text-align: center;
         letter-spacing: 0.2px;
         line-height: 88px;
-        width: auto;
         display: flex;
-        width: 709px;
+        max-width: 709px;
         margin-bottom: 17px;
+        @include defaultLaptop{
+            font-size: 65px;
+        }
+        @include smallLaptop{
+            font-size: 55px;
+        }
+        @include horizontalTable{
+            font-size: 50px;
+        }
+        @include verticalTable{
+            font-size: 40px;
+        }
+        @include adaptiveNavIcon{
+            font-size: 35px;
+            line-height: 40px;
+        }
+        @include defaultMobile{
+            font-size: 25px;
+            line-height: 30px;
+        }
+ 
     }
     .p-pres{
         font-family: Graphik;
@@ -79,6 +62,12 @@ section{
         max-width: 582px;
         text-align: center;
         margin-top: 0;
+        @include verticalTable{
+            font-size: 16px;
+        }
+        @include defaultMobile{
+            line-height: 25px;
+        }
     }
     .pres-btns{
         display: flex;
@@ -119,8 +108,13 @@ section{
 
     .img-dashboard{
         display: flex;
-        width: 1552.023px;
-        height: 841px;
+        width: 100%;
+        @include horizontalTable{
+            width: 100%;
+        }
+        @include defaultMobile{
+            width:100%;
+        }
 }
 
 
@@ -137,6 +131,12 @@ section{
     .features-h1{
         @include h1-catalogs;
         margin-bottom: 0px;
+        @include defaultLaptop{
+            font-size: 40px;
+        }
+        @include defaultMobile{
+            font-size: 35px;
+        }
     }
     .features-p{
         font-family: Graphik Trial;
@@ -148,16 +148,36 @@ section{
         text-align: center;
         letter-spacing: 0.2px;
         max-width: 600px;
+        @include defaultLaptop{
+            font-size: 16px;
+        }
+        
     }
     .imgs-notes{
         display: flex;
         align-items: center;
         gap: 27px;
-
+        @include defaultLaptop{
+            flex-direction: column;
+        }
         .img-features{
         width: 752px;
         height: 759px;
         margin-top: 80px;
+        @include defaultLaptop{
+                width: 500px;
+                height: 100%;
+                position: sticky;
+        }
+        @include defaultMobile{
+            width: 100%;
+        }
+        @include adaptiveNavIcon{
+            width: 120%;
+        }
+        @include smallMobile{
+            width: 110%;
+        }
         
     }
         .notes{
@@ -166,7 +186,15 @@ section{
             flex-direction: column;
             align-items: flex-start;
             gap: 25px;
-
+            position: relative;
+            @include defaultLaptop{
+                flex-direction: column;
+            }
+            .note:nth-child(3){
+                .h3-note{
+                    margin-bottom: 30px;
+                }
+            }
 
             .note{
                 display: flex;
@@ -175,6 +203,9 @@ section{
                 align-items: flex-start;
                 max-height: 196px;
                 flex-wrap: wrap;
+                @include defaultMobile{
+                    width:100%;
+                }
 
                 .h3-note{
                     color: #fff;
@@ -189,8 +220,15 @@ section{
                     flex-direction: row;
                     gap: 10px;
                     margin-top: 0;
-                    max-width: 153px;
+                    max-width: 150px;
                     margin-bottom: 0;
+                    @include verticalTable{
+                        font-size: 18px;
+                    }
+                    @include defaultMobile{
+                        font-size: 14px;
+                        padding-left: 5px;
+                    }
                 }
                 .p-note{
                     font-family: Graphik Trial, sans-serif;
@@ -205,6 +243,10 @@ section{
                     gap: 10px;
                     margin-top: 0;
                     flex-direction: column;
+                    @include defaultMobile{
+                        font-size: 13px;
+                        line-height: 20px;
+                    }
                 }
                 .icon-note1{
                     width: 29px;
@@ -214,6 +256,13 @@ section{
                     flex-direction: column;
                     align-items: center;
                     gap: 10px;
+                    @include defaultMobile{
+                        width: 25px;
+                        height: 27px;
+                    }
+                    @include smallMobile{
+                        
+                    }
                 }
             }
                 .icon-note2{
@@ -224,6 +273,9 @@ section{
                     flex-direction: column;
                     align-items: center;
                     gap: 10px;
+                    @include smallMobile{
+                        width: 27px;
+                    }
                 }
                 .icon-note3{
                     width: 41px;
@@ -233,7 +285,9 @@ section{
                     flex-direction: column;
                     align-items: center;
                     gap: 10px;
-
+                    @include smallMobile{
+                        width: 35px;   
+                    }
                 }
         }
     }
@@ -245,10 +299,22 @@ flex-direction: column;
 align-items: center;
 gap: 35px;
 align-self: stretch;
+@include verticalTable{
+    margin-top: 0;
+}
+@include defaultMobile{
+    padding: 0;
+}
+@include adaptiveNavIcon{
+    padding: 0;
+}
 
     .content-h1{
         @include h1-catalogs;
         margin-bottom: -20px;
+        @include defaultLaptop{
+            font-size: 40px;
+        }
     }
     .content-p{
         font-family: Graphik Trial, sans-serif;
@@ -263,11 +329,20 @@ align-self: stretch;
         display: flex;
         max-width: 571px;
         margin-top: 0px;
+        @include defaultMobile{
+            font-size: 16px;
+            
+        }
     }
     .cards{
         display: flex;
         align-items: center;
         gap: 33px;
+        box-sizing: border-box;
+        @include horizontalTable{
+            flex-direction: column;
+        }
+        
         .card{
             display: flex;
             width: 476px;
@@ -278,6 +353,14 @@ align-self: stretch;
             background-color: #fff;
             border-radius: 10px;
             border: 1px solid #D3D3D3;
+            @include defaultMobile{
+                width: 100%;
+            }
+            @include adaptiveNavIcon{
+                width: 100%;
+                
+            }
+            
 
             .card-h2{
                 font-family: Graphik Trial, sans-serif;
@@ -287,6 +370,10 @@ align-self: stretch;
                 line-height: 30px;
                 color: #000;
                 margin-bottom: 0;
+                @include defaultMobile{
+                    margin-top: 0;
+                }
+                
             }
             .card-p{
                 font-family: Graphik Trial, sans-serif;
@@ -299,6 +386,9 @@ align-self: stretch;
                 align-items: center;
                 max-width: 268px;
                 margin-top: 0;
+                // @include defaultMobile{
+                //     margin-bottom: -20px;
+                // }
                 
             }
             .card-btn{
@@ -315,11 +405,36 @@ align-self: stretch;
                 font-weight: 500;
                 line-height: 25px;
                 margin-bottom: 40px;
+                @include defaultMobile{
+                    margin-top: 0px;
+                }
             }
+            
             .card-img{
                 margin-bottom: -50px;
                 padding-bottom: 0px;
                 margin-top: -60px;
+                @include defaultMobile{
+                    width: 100%;
+                }
+                @include adaptiveNavIcon{
+                    width: 100%;
+                }
+            }
+            .card-img1{
+                
+                padding-bottom: 0px;
+                
+                @include defaultMobile{
+                    width: 80%;
+                    
+                    margin-top: 0;
+                }
+                @include adaptiveNavIcon{
+                    width: 100%;
+                    
+                    margin-top: 0;
+                }
             }
         }
     }
@@ -337,6 +452,9 @@ align-self: stretch;
         gap: 10px;
         @include h1-catalogs;
         margin-bottom: -40px;
+        @include defaultLaptop{
+            font-size: 40px;
+        }
     }
     .gallery-p{
         font-family: Graphik Trial;
@@ -351,6 +469,9 @@ align-self: stretch;
         align-items: center;
         margin-top: 0;
         max-width: 571px;
+        @include adaptiveNavIcon{
+            font-size: 16px;     
+        }
     }
     .gallery-imgs{
         align-items: center;
@@ -359,23 +480,54 @@ align-self: stretch;
         flex-direction: row;
         align-items: center;
         gap: 44px;
+        @include verticalTable{
+            flex-direction: column;
+        }
     }
     .gallery-img1 {
         @include contents-imgs-four;
+        @include smallLaptop{
+            width: 20%;  
+        }
+        @include verticalTable{
+            width: 100%;
+        }
     }
     .gallery-img2{
         @include contents-imgs-four;
+        @include smallLaptop{
+            width: 20%;
+        }
+        @include verticalTable{
+            width: 100%;
+        }
     }
     .gallery-img3{
         @include contents-imgs-four;
+        @include smallLaptop{
+            width: 20%;
+        }
+        @include verticalTable{
+            width: 100%;
+        }
     }
     .gallery-img4{
         @include contents-imgs-four;
+        @include smallLaptop{
+            width: 20%;
+        }
+        @include verticalTable{
+            width: 100%;
+        }
     }
     .second-gallery-imgs{
         display: flex;
         align-items: center;
         gap: 33px;
+        justify-content: center;
+        @include verticalTable{
+            display: none;
+        }
 
         .gallery-img5{
             width: 395px;
@@ -383,6 +535,9 @@ align-self: stretch;
             display: flex;
             align-items: center;
             border-radius: 12px;
+            @include smallLaptop{
+                width: 35%;
+            }
         }
         .gallery-img6{
             width: 225px;
@@ -390,6 +545,9 @@ align-self: stretch;
             display: flex;
             align-items: center;
             border-radius: 12px;
+            @include smallLaptop{
+                width: 20%;
+            }
         }
         .gallery-img7{
             width: 395px;
@@ -397,6 +555,9 @@ align-self: stretch;
             display: flex;
             align-items: center;
             border-radius: 12px;
+            @include smallLaptop{
+                width: 35%;
+            }
         }
     }
     .gallery-btn{
@@ -427,6 +588,9 @@ align-self: stretch;
     .partners-h1{
         @include h1-catalogs;
         margin-bottom: 0;
+        @include defaultLaptop{
+            font-size: 40px;
+        }
     }
 
     .partners-p{
@@ -443,15 +607,29 @@ align-self: stretch;
         text-align: center;
         max-width: 571px;
         margin-top: -20px;
+        @include adaptiveNavIcon{
+            font-size: 16px;
+        }
     }
     .brands{
-
+        @include verticalTable{
+            display: grid;
+            grid-template-columns: repeat(3, 60px);
+            gap: 50px;
+            align-items: center;
+        }
         .brand{
             align-items: center;
-            margin-right: 74px
+            margin-right: 74px;
+            
         }
+        
         .brand:last-of-type{
             margin-right: 20px;
+            @include verticalTable{
+                width: 83px;
+                height: 33px;
+            }
         }
     }
     .brands-btn{
@@ -470,6 +648,9 @@ align-self: stretch;
 
     .h1-testiomonials{
         @include h1-catalogs;
+        @include defaultLaptop{
+            font-size: 40px;
+        }
     }
     .comments{
         display: grid;
@@ -484,15 +665,25 @@ align-self: stretch;
         height: auto;
         row-gap: 20px;
         column-gap: 20px;
+        @include verticalTable{
+            display: grid;
+            grid-template-columns: minmax(0,430px);
+        }
         .comment:nth-child(1){
             margin-bottom: 0px;
             height: 200px;
             margin-top: 10px;
             padding-bottom: 90px;
+            @include verticalTable{
+                padding-bottom: 70px;
+            }
         }
         .comment:nth-child(2){
             height: 200px;
             padding-bottom: 80px;
+            @include verticalTable{
+                padding-bottom: 70px;
+            }
             .client{
                 margin-top: 0;
             }
@@ -506,6 +697,9 @@ align-self: stretch;
             height: 200px;
             margin-top: -20px;
             padding-bottom: 70px;
+            @include verticalTable{
+                margin-top: 10px;
+            }
         }
         .comment{
             display: flex;
@@ -516,7 +710,9 @@ align-self: stretch;
             background: #181818;
             max-width: 430px;
             flex-direction: column;
-        
+            @include defaultMobile{
+                width:80%;
+            }
             
             .client{
 
@@ -538,6 +734,11 @@ align-self: stretch;
                 margin-top: -30px;
                 margin-bottom: 0;
                 flex-direction: column;
+                @include adaptiveNavIcon{
+                    font-size: 14px;  
+                    line-height: 20px;
+                }
+                
             }
             .job{
                 font-family: Graphik Trial,sans-serif;
@@ -555,6 +756,10 @@ align-self: stretch;
                 position: absolute;
                 margin-left: 52px;
                 margin-top: 35px;
+                @include adaptiveNavIcon{
+                    font-size: 14px; 
+                    line-height: 20px;
+                }
             }
             .avatar{
                 display: flex;
@@ -577,6 +782,13 @@ align-self: stretch;
                 align-items: center;
                 margin-top: 0;
                 margin-bottom: 0;
+                @include adaptiveNavIcon{
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+                @include defaultMobile{
+                    font-size: 13px;
+                }
         }
     }
 }
@@ -591,11 +803,14 @@ align-self: stretch;
     .opentype-div{
         background: #343434;
         display: flex;
-        height: 370px;
         align-items: center;
         gap: 86px;
         border-radius: 33px;
-
+        flex-direction: column;
+        padding-bottom: 200px;
+        @include verticalTable{
+            background: #181818;
+        }
         .left-content{
             .opentype-h1{
                 @include h1-catalogs;
@@ -605,6 +820,20 @@ align-self: stretch;
                 gap: 10px;
                 margin-right: 0;
                 margin-left: 70px;
+                @include defaultLaptop{
+                    font-size: 50px;
+                }
+                @include smallLaptop{
+                    font-size: 40px;
+                }
+                @include horizontalTable{
+                    font-size: 30px;
+                    flex-direction: column;
+                }
+                @include verticalTable{
+                    font-size: 25px;
+                    align-items: center;
+                }
             }
             .opentype-btn{
                 display: flex;
@@ -622,13 +851,38 @@ align-self: stretch;
                 justify-content: center;
                 margin-right: 0;
                 margin-left: 85px;
+                @include horizontalTable{
+                    font-size: 15px;
+                    padding: 10px 55px;
+                    margin-bottom: 0;
+                }
+                @include verticalTable{
+                    align-items: center;
+                    display: flex;
+                    justify-self: center;
+                }
             }
 
         }
         .right-content{
+            .img-opentype-adaptive{
+                display: none;
+                @include verticalTable{
+                    display: flex;
+                    width: 100%;
+                }
+            }
             .img-opentype{
                 border-bottom-right-radius: 20px;
                 margin-bottom: -5px;
+                display: flex;
+                @include horizontalTable{
+                    border-radius: 20px;
+                    margin-top: -50px;
+                }
+                @include verticalTable{
+                    display: none;
+                }
             }
         }
     }
@@ -643,8 +897,17 @@ footer{
         align-items: flex-start;
         gap: 75px;
         margin-left: 50px;
+        @include verticalTable{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
         .a-footer:nth-of-type(3){
                 margin-right: 199px;
+                @include horizontalTable{
+                    margin-right: 0;
+                }
+                
             }
         .a-footer{
             display: flex;
@@ -662,6 +925,9 @@ footer{
                 line-height: 30px;
                 color: #fff;
                 text-decoration: none;
+                @include horizontalTable{
+                    font-size: 18px;
+                }
             }
             .a-nav-footer{
                 font-family: Graphik Trial, sans-serif;
@@ -672,6 +938,9 @@ footer{
                 color: #fff;
                 text-decoration: none;
                 margin-bottom: -15px;
+                @include horizontalTable{
+                    font-size: 14px;
+                }
             }
         }
 
@@ -693,6 +962,9 @@ footer{
                     line-height: 24px;
                     color:#fff;
                     margin-left: 8px;
+                    @include horizontalTable{
+                        font-size: 14px;    
+                    }
                 }
             }
             .telephone{
@@ -706,6 +978,9 @@ footer{
                     line-height: 24px;
                     color: #fff;
                     margin-left: 10px;
+                    @include horizontalTable{
+                        font-size: 14px;
+                    }
                 }
             }
             .social-media{
